@@ -37,3 +37,8 @@
 	bootph-all;
 	status = "okay";
 };
+
+&gem0 {
+	status = "okay";
+	phy-mode = "rgmii-id";
+};
