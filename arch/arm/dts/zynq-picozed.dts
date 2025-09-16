@@ -38,6 +38,16 @@
 	status = "okay";
 };
 
+&i2c0 {
+	bootph-all;
+	status = "okay";
+};
+
+&i2c1 {
+	bootph-all;
+	status = "okay";
+};
+
 &gem0 {
 	status = "okay";
 	phy-mode = "rgmii-id";
