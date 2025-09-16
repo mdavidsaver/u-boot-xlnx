@@ -46,6 +46,11 @@
 &i2c1 {
 	bootph-all;
 	status = "okay";
+
+	eeprom: eeprom@50 {
+		compatible = "microchip,25aa25e48";
+		reg = <0x50>;
+	};
 };
 
 &gem0 {

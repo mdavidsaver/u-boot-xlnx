@@ -273,6 +273,13 @@ static const struct i2c_eeprom_drv_data atmel24c512_data = {
 	.offset_len = 2,
 };
 
+static const struct i2c_eeprom_drv_data microchip24AA025E48T_data = {
+    .size = 2048/8,
+    .pagesize = 16,
+    .addr_offset_mask = 0,
+    .offset_len = 1,
+};
+
 static const struct udevice_id i2c_eeprom_std_ids[] = {
 	{ .compatible = "i2c-eeprom", (ulong)&eeprom_data },
 	{ .compatible = "atmel,24c01", (ulong)&atmel24c01a_data },
@@ -289,6 +296,7 @@ static const struct udevice_id i2c_eeprom_std_ids[] = {
 	{ .compatible = "atmel,24c128", (ulong)&atmel24c128_data },
 	{ .compatible = "atmel,24c256", (ulong)&atmel24c256_data },
 	{ .compatible = "atmel,24c512", (ulong)&atmel24c512_data },
+	{ .compatible = "microchip,25aa25e48", (ulong)&microchip24AA025E48T_data },
 	{ }
 };
 
